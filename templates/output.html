@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Fertilozz</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+   <link href="{{url_for('static', filename='images/logo.png') }}" rel="icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+  <style>
+        .pred-img {
+  width: 300px;
+  height: 300px;
+  border:2px solid #fff;
+  background: url(img/duck.png) no-repeat;
+  -moz-box-shadow: 0px 6px 5px #ccc;
+  -webkit-box-shadow: 0px 6px 5px #ccc;
+  box-shadow: 0px 6px 5px #ccc;
+  -moz-border-radius:190px;
+  -webkit-border-radius:190px;
+  border-radius:190px;
+}
+body{
+        background-color: #ffffff;
+        }
+
+  </style>
+
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="{{url_for('home')}}" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>Fertilozz</h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="{{url_for('home')}}">Home</a></li>
+          <li><a href="{{url_for('analyze')}}">Predict</a></li>
+          <li><a href="/tools/{{predict}}">Tools</a></li>
+          <li><a href="/forecast/{{predict}}">Forecast</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header>
+<br><br><br><br>
+<h1 style="text-align:center;"><b>Predicted Crop</b></h1>
+  <br>
+
+  <table>
+    <tr>
+      <td style="padding-top:40px; width:40% ;"><img src="/static/Pictures/Crops/{{predict}}.jpeg" width="200" height="200" class="img-align img pred-img" ><br><br></td>
+      <td><h2 style="text-align:center;" ><b>{{predict}}</b></h2><br><p style="font-size:20px;text-align:justify;"> {{content}}</p></td>
+    </tr>
+  </table>
+    <h3 style="text-align:center;">Check out the step by step procedure to cultivate <b>{{predict}}</b> - <a href="{{link}}" target="_blank">Click here</a></h3><br><br><br>
+    <h2 style="color:black; text-align:center;"><b>Recommended Video</b></h2><br>
+    <iframe width="500px" height="300px" src="{{recommend}}" style="margin-left:500px;"> </iframe>
+<br><br><br><br>
+<div style="margin:0;position: absolute; margin-left:550px;">
+     &nbsp&nbsp&nbsp&nbsp
+
+<button onclick="location.href='/fertile/{{predict}}'" type="button" class="btnn btn btn-success">
+         Recommend Fertilizer</button>&nbsp&nbsp
+
+</div>
+<br><br><br><br>
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-1">
+        <div class="col-lg-6 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span>Fertilozz</span>
+          </a>
+          <p >We are here to predict the crops based on your soil conditions and recommend proper fertilizer to enhance the growth of your crops.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 footer-info"></div>
+
+
+
+        <div class="col-lg-2 col-md-12 footer-contact text-center text-md-start" style="float:right;">
+          <h4>Contact Us</h4>
+          <p>
+            <strong>Email:</strong> abc@gmail.com<br>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Fertilozz</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{{url_for('static',filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/aos/aos.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/purecounter/purecounter_vanilla.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/swiper/swiper-bundle.min.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/php-email-form/validate.js')}}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{url_for('static',filename='javascript/main.js')}}"></script>
+
+</body>
+<style>
+.img
+{
+border-radius:15px;
+}
+.img:hover
+{
+transform: scale(1.1);
+transition: 0.6s all ease-in-out;
+}
+table
+{
+margin:70px;
+margin-left:250px;
+width:70%;
+}
+table
+{
+margin-top:35px;
+background-color:#E0FFCD;
+border-radius:10px;
+}
+td
+{
+
+justify-content:center;
+padding-right:40px;
+padding-left:0px;
+}
+th
+{
+font-size: 30px;
+text-align :center;
+}
+</style>
+</html>
