@@ -1,8 +1,7 @@
 # 🌾 Advanced-End-to-End-System-for-New-Age-Farmers-Using-Machine-Learning 
 
-# Description: 
-
-- Developed a smart agriculture system leveraging Machine Learning and IoT to enhance modern farming efficiency. The project integrates real-time environmental monitoring, crop prediction, and automated irrigation through a web/mobile interface.
+# Project Overview:
+- This project focuses on developing an AI-driven smart agriculture system that leverages Machine Learning and IoT to transform traditional farming into a more data-driven, automated, and sustainable practice. The system enables farmers to make intelligent decisions by monitoring environmental parameters, predicting suitable crops, automating irrigation, and providing real-time recommendations.
   
 # 🧠 Objectives:
 
